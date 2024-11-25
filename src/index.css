@@ -1,13 +1,176 @@
-body {
+/* main colors -
+#FFAA1D
+
+*/
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2.4rem;
+  font-family: "Roboto", sans-serif;
+}
+.App {
+  display: grid;
+  grid-template-columns: 40rem auto;
+  height: 100vh;
+}
+.all_notes,
+.note {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  text-align: center;
+  border-right: 1.5px solid #a1680c;
+  gap: 2rem;
+}
+.notes_container,
+.view {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+  width: 90%;
+  height: 92%;
+  border: 2px solid #a1680c;
+  border-radius: 8px;
+  overflow: auto;
+}
+.title {
+  font-size: 6rem;
+}
+.description {
+  text-align: start;
+  font-size: 3rem;
+}
+.note {
+  padding-top: 2rem;
+  text-align: center;
+}
+.note_title {
+  width: 70%;
+  align-self: center;
+  border: 2px solid #a1680c;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: all 0.1s;
+}
+.whole-note {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.note_title:hover {
+  background-color: rgb(255, 201, 24);
+  transform: scale(1.05);
+}
+.delete-btn,
+.check-btn {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: #a1680c;
+}
+.check-btn:hover {
+  color: green;
+}
+.delete-btn:hover {
+  color: red;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.add-button {
+  width: 30px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  height: auto;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #a1680c;
+  background-color: white;
+  transition: all 0.1s; /* Smooth hover and active effects */
+}
+
+.add-button:hover {
+  background-color: rgb(255, 201, 24);
+  transform: scale(1.05);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.title-input {
+  align-self: center;
+  padding: 1rem; /* Add padding */
+  border: 1px solid #a1680c;
+  border-radius: 8px;
+  font-size: 1.6rem;
+
+  width: 20%;
+  margin-left: 2rem;
+}
+.desc-input {
+  width: 80%;
+  align-self: center;
+  height: 10rem; /* Set a more reasonable height */
+  padding: 1rem; /* Add padding for better text input experience */
+  border: 1px solid #a1680c; /* Ensure consistent border styling */
+  border-radius: 8px; /* Match the note style */
+  font-size: 1.6rem; /* Adjust font size to match the app's typography */
+}
+.flex-me {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.flex-me2 {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #a1680c;
+}
+.btn-add-note,
+.btn-cancel {
+  width: 10%;
+  align-self: flex-end;
+  font-size: 2rem; /* Set button text size */
+  font-weight: bold; /* Make the button text stand out */
+  color: white; /* White text for contrast */
+  background-color: #ffaa1d; /* Main color of your app */
+  border: 2px solid #a1680c; /* Add a border to match your theme */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 1rem 2rem; /* Space inside the button */
+  cursor: pointer; /* Indicate interactivity */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and active effects */
+}
+
+.btn-add-note:hover,
+.btn-cancel:hover {
+  background-color: #ffc918; /* Slightly lighter shade on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+.buttons-flex {
+  margin-top: 10rem;
+  display: flex;
+  gap: 40rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
