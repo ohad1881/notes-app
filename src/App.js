@@ -137,7 +137,7 @@ function AllNotes({
           style={isAddNote ? { backgroundColor: "rgb(255, 201, 24)" } : {}}
           onClick={() => handleAddNote()}
         >
-          +
+          {isAddNote ? "-" : "+"}
         </button>
       </div>
       <AllNotesContainer
